@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <ul>
+        <script type="text/javascript">
+            // 객체
+            var grades = {'jong': 10, 'cha': 12, 'bin': 12};
+            // for in 문
+            for(var name in grades) {
+                document.write("<li>key : "+ name +" value : " + grades[name] + "</li>");
+            }
+        </script>
+    </ul> -->
+    <script type="text/javascript">
+        // 객체 지향 프로그래밍
+        var grades = {
+            'list' : {'ljayG' : 10, 'k8805' : 8, 'sori' : 10},
+            'show' : function () {
+                for(var nick in this.list){
+                    console.log(nick, this.list[nick]);
+                }
+            }
+        }
+        // alert(grades['list']['ljayG']);
+        grades.show();
+    </script>
+</body>
+</html>
