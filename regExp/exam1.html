@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        // 정규표현식
-        var pattern = /a/;
-        var pattern2 = new RegExp('a');
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // 정규표현식
+            var pattern = /a/;
+            var pattern2 = new RegExp("a");
 
-        console.log(pattern.exec('abcdef'));
+            console.log(pattern.exec("abcdef"));
 
-        console.log(pattern2.exec('zxcvgb'));
-    </script>
-</body>
+            console.log(pattern2.exec("zxcvgb"));
+
+            console.log("abcdef".replace(pattern, "A"));
+        </script>
+    </body>
 </html>

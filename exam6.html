@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var vscope = 'global'; //전역변수
+        function fscope() {
+            var vscope = 'local'; //지역변수
+            alert(vscope);
+        }
+        function fscope2() {
+            alert(vscope);
+        }
+        fscope();
+        fscope2();
+
+        let gol1 = 'online';
+       
+        alert(gol1);
+        alert(gol1);
+       
+    </script>
+</body>
+</html>

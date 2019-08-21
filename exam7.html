@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function a() {
+                var i = 0;
+            }
+            for (var i = 0; i < 5; i++) {
+                a();
+                document.write(i);
+            }
+            //전역 변수를 사용
+            var MYAPP = {};
+            MYAPP.calculator = {
+                left: null,
+                right: null
+            };
+            MYAPP.coordinate = {
+                left: null,
+                right: null
+            };
+
+            MYAPP.calculator.left = 10;
+            MYAPP.calculator.right = 20;
+            function sum() {
+                return MYAPP.calculator.left + MYAPP.calculator.right;
+            }
+            document.write(sum());
+
+            // 익명함수
+            (function() {
+                var MYAPP = {};
+                MYAPP.calculator = {
+                    left: null,
+                    right: null
+                };
+                MYAPP.coordinate = {
+                    left: null,
+                    right: null
+                };
+
+                MYAPP.calculator.left = 20;
+                MYAPP.calculator.right = 30;
+                function sum() {
+                    return MYAPP.calculator.left + MYAPP.calculator.right;
+                }
+                document.write(sum());
+            })();
+        </script>
+    </body>
+</html>
