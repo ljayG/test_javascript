@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body.night{
+            background-color: #000;
+            color: #fff;
+        }
+        .js{
+            font-weight: bold;
+            color:red;
+        }
+        #first{
+            color:green;
+        }
+        span{
+            color:blue;
+        }
+    </style>
+</head>
+<body id="wrap">
+    <h1><a href="index.html">WEB</a></h1>
+    <button type="button" onclick="BgChgeNight();">Nigth</button>
+    <button type="button" onclick="BgChgeDay();">Day</button>
+    <button type="button" onclick="bgChgeToggle();">Toggle</button>
+    <h2 style="background-color:coral;color:powderblue;">JavaScript</h2>
+    <p>
+        <span id="first" class="js">JavaScript</span> (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside <span>HTML</span> and <span>CSS</span>, <span class="js">JavaScript</span> is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in <span class="js">JavaScript</span> engine. Each of the many <span class="js">JavaScript</span> engines represent a different implementation of <span class="js">JavaScript</span>, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
+    </p>
+    <script>
+        // 각각 버튼제어
+        function BgChgeNight() {
+           document.querySelector("body").className = "night";
+        };
+        function BgChgeDay() {
+            document.querySelector("body").className = "";
+        };
+
+        // 토글 방식
+        function bgChgeToggle() {
+            var element = document.getElementById("wrap");
+            element.classList.toggle("night");
+        }
+        
+    </script>
+</body>
+</html>
